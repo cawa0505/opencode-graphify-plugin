@@ -17,8 +17,7 @@ const plugin: Plugin = async (ctx: PluginInput): Promise<Hooks> => {
       c.command["graphify-init"] = {
         description:
           "Initialize a project with graphify + statemachine infrastructure: state.json, .gitignore, and AST graph",
-        template:
-          "Use the `graphifyInit` tool to set up the current project. If the user specified a project directory, pass it as `project_dir`.",
+        template: "Run `graphify init` to set up the project.",
       }
     },
     tool: {
