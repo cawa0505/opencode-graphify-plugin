@@ -2,10 +2,12 @@ import type { Plugin, PluginInput, Hooks, Config } from "@opencode-ai/plugin"
 import { tool } from "@opencode-ai/plugin"
 import { execSync } from "child_process"
 import { existsSync } from "fs"
+import { startAutoUpdate } from "./auto-update.js"
 
 const z = tool.schema
 
 const plugin: Plugin = async (ctx: PluginInput): Promise<Hooks> => {
+  startAutoUpdate(ctx) // best-effort: check npm for a newer version in the background
   const dir = ctx.directory
 
   return {
