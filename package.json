@@ -1,6 +1,6 @@
 {
   "name": "@jimmyyen/graphify-opencode-plugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "OpenCode plugin for Graphify: slash commands for project initialization and graph infrastructure",
   "license": "MIT",
   "author": "jimmyyen",
