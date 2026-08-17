@@ -12,13 +12,8 @@ const plugin: Plugin = async (ctx: PluginInput): Promise<Hooks> => {
 
   return {
     config: async (cfg: Config) => {
-      const c = cfg as Record<string, any>
-      c.command ??= {}
-      c.command["graphify-init"] = {
-        description:
-          "Initialize a project with graphify + statemachine infrastructure: state.json, .gitignore, and AST graph",
-        template: "Run `graphify init` to set up the project.",
-      }
+      // graphify-init is handled by commands/graphify-init.md in ~/.config/opencode/commands/
+      // No plugin command registration needed — the .md file provides the AI instruction directly.
     },
     tool: {
       graphifyInit: tool({
