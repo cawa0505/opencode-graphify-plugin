@@ -18,7 +18,7 @@ const plugin: Plugin = async (ctx: PluginInput): Promise<Hooks> => {
     tool: {
       graphifyInit: tool({
         description:
-          "Initialize a project with graphify + statemachine infrastructure. Creates `.opencode/state.json`, updates `.gitignore`, and builds the initial AST graph.",
+          "Slash command /graphify-init: Initialize a project with graphify + statemachine infrastructure. Creates `.opencode/state.json`, updates `.gitignore`, and builds the initial AST graph.",
         args: {
           project_dir: z.string().optional(),
         },
